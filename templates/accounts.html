@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Accounts</h1>
+<a href="{{ url_for('add_account') }}" class="btn btn-primary">Add Account</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name(company Name)</th>
+            <th>Credit amount (in rupee)</th>
+            <th>Debit amount (in rupee)</th>
+
+            <th>Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for account in accounts %}
+        <tr>
+            <td>{{ account.id }}</td>
+            <td>{{ account.name }}</td>
+            <td>{{ account.credit }}</td>
+            <td>{{ account.debit }}</td>
+            <td>{{ account.balance }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

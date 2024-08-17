@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Add Transaction</h1>
+<form method="post">
+    <div class="mb-3">
+        <label for="account_id" class="form-label">Account ID</label>
+        <input type="number" class="form-control" id="account_id" name="account_id" required>
+    </div>
+    <div class="mb-3">
+        <label for="type" class="form-label">Transaction Type</label>
+        <select class="form-control" id="type" name="type">
+            <option value="credit">Credit</option>
+            <option value="debit">Debit</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="amount" class="form-label">Amount</label>
+        <input type="number" class="form-control" id="amount" name="amount" required>
+    </div>
+    <button type="submit" class="btn btn-success">Add Transaction</button>
+{% endblock %}

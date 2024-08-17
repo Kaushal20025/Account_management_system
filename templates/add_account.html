@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Add Account</h1>
+<form method="post">
+    <div class="mb-3">
+        <label for="name" class="form-label">Account Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="credit" class="form-label">total credit</label>
+        <input type="number" class="form-control" id="credit" name="credit" required>
+    </div>
+    <div class="mb-3">
+        <label for="debit" class="form-label">total debit</label>
+        <input type="number" class="form-control" id="debit" name="debit" required>
+    </div>
+    <div class="mb-3">
+        <label for="balance" class="form-label">Initial Balance</label>
+        <input type="number" class="form-control" id="balance" name="balance" required>
+    </div>
+    <button type="submit" class="btn btn-success">Add Account</button>
+</form>
+{% endblock %}
